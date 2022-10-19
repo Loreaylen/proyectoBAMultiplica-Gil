@@ -1,0 +1,17 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+#logo {
+  height: 100px;
+  width: 100px;
+}
+#seccionTitulo {
+  background-image: url(../src/img/fondoTitulo.jpg);
+}
+
+.contenedorImg img {
+  height: 300px;
+  width: 300px;
+}
