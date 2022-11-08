@@ -17,30 +17,35 @@
 header {
   background-color: #432818;
   height: 120px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 #contenedorLogo {
   height: 100%;
-  width: 10%;
-  padding: 10px 5px;
+  padding: 10px 15px;
 }
 
 #logo {
   height: 100px;
   width: 100px;
-  display: block;
   margin: auto;
 }
-.alineamiento {
-  display: inline-block;
-  vertical-align: top
-}
+
 nav {
   height: 100%;
-  width: 89%;
-  padding-top: 50px;
-  position: relative;
-  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+#menuOpciones {
+  height: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 ul li a {
@@ -49,22 +54,15 @@ ul li a {
   font-family: 'Montserrat', sans-serif;
 }
 
-#menuOpciones {
-  height: 50px;
-  position:absolute;
-  right:0;
-  bottom:0;
-  display: block;
-}
-
 #menuOpciones li {
-  display: inline-block;
+  list-style-type: none;
   width: 150px;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
-  text-align: center;
-  padding-top: 10px;
-  
+  text-align: center; 
 }
 
 #menuRazas {
@@ -73,7 +71,7 @@ ul li a {
 
 #menuRazas ul {
   position:absolute;
-  top:50px;
+  top:100%;
   height: 220px;
   width: 150px;
   background-color: #6F1D1B;
@@ -102,7 +100,7 @@ ul li a {
 /*MAIN*/
 
 main {
-  background-color: #FFE6A7;
+  background-color: #fff;
 }
 
 /*TITULO*/
@@ -115,15 +113,14 @@ main {
   background-position: 0;
   height: 600px;
   width: 100%;
-  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #seccionTitulo article {
-  height: 120px;
+  height: 300px;
   width: 700px;
-  position: absolute;
-  top:40%;
-  left: 28.7%;
 }
 
 h1 {
@@ -143,15 +140,21 @@ h1 {
 /*------------*/
 /*SECCION ARTICULOS*/
 
+hr {
+  width: 85%;
+  margin: auto;
+}
+
 .contenedorArt {
+  width: 100%;
   padding: 30px;
-  margin: 5px 10px;
-  border-bottom: 3px double #6F1D1B;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 20px;
 }
 
 .contenedorArt h2 {
   height: 35px;
-  margin-bottom: 15px;
   font-size: 30px;
   text-align: center;
   color: #99582A ;
@@ -165,12 +168,10 @@ h1 {
 
 
 .origen, .caracteristicas {
-
   padding: 20px;
-  margin-bottom: 15px;
 }
 
-.origen h3, .caracteristicas h3 {
+.contenedorArt h3 {
   padding-left: 30px;
   text-decoration: underline;
   margin-bottom: 10px;
@@ -178,13 +179,18 @@ h1 {
 }
 
 .origen {
-  border: 3px dashed #99582A;
+  background-color: #99582A;
   border-radius: 15px;
 }
 
 .origen ul {
   padding-left: 30px;
   line-height: 1.5;
+  color:#fff
+}
+
+.origen h3, .origen p {
+  color:#fff;
 }
 
 .caracteristicas ul {
@@ -200,11 +206,9 @@ h1 {
 }
 
 .contenedorArt span {
-  display: block;
-  margin-top:30px;
   text-align: right;
   font-size: 18px;
-  
+  align-self: flex-end;
 }
 
 .contenedorArt span a {
@@ -223,23 +227,24 @@ h1 {
 
 #seccionForm {
   background-color: #99582A;
-  height: 150px;
-  padding:25px;
+  height: 200px;
 }
 
 form {
-  height: 120px;
-}
-
-form div {
-  width: 19%;
-  display: inline-block;
-  margin-top: 10px;
+  height:200px;
+  padding:20px;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 25px;
+  align-items: center;
+  justify-content: center;
 }
 
 form div label {
   color: #fff;
-  font-family: 'Montserrat', sans-serif;;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
 #seccionForm legend {
@@ -249,19 +254,25 @@ form div label {
   text-align: center;
 }
 
-form div input.inputSeleccionar {
-  height:15px;
-  width: 15px;
+.contenedorInput{
+  width: 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-#botonEnviar {
-  display: block;
-  width: 100%;
-  height: 30px;
+form .contenedorInput div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+form div input.inputSeleccionar {
+  height:18px;
+  width: 28px;
 }
 
 #botonEnviar input{
-  display: block;
   margin: auto;
   height: 30px;
   width: 120px;
@@ -276,18 +287,25 @@ form div input.inputSeleccionar {
 footer {
   height: 150px;
   background-color: #6F1D1B;
+  display: flex;
+  flex-flow:row wrap;
 }
 
 footer div {
-  display: inline-block;
-  width: 49%;
-  position: relative;
+  width: 50%;
+  height: 100%;
 }
 
 .contenedorInfo {
-  position: absolute;
-  top: 30px;
-  left: 28.7%
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorInfo h5 {
+  padding: 10px;
+  text-decoration: underline;
 }
 
 .contenedorInfo span, .contenedorInfo h5 {
@@ -296,10 +314,7 @@ footer div {
   font-family: 'Montserrat', sans-serif;;
 }
 
-.contenedorInfo h5 {
-  text-decoration: underline;
-}
-
 .contenedorInfo ul li {
-  list-style-type: none;
+  list-style-type: disc;
+  color: #fff;
 }

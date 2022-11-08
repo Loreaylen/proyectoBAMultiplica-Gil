@@ -12,10 +12,10 @@
 </head>
 <body>
   <header  id="inicio">
-    <div id="contenedorLogo" class="alineamiento">
+    <div id="contenedorLogo">
       <img id="logo" src="../src/img/logo.png" alt="logo">
     </div>
-    <nav class="alineamiento">
+    <nav>
       <ul id="menuOpciones">
         <li><a href="#">Inicio</a></li>
         <li id="menuRazas"><a href="#">Razas</a>
@@ -68,7 +68,7 @@
         </div>
         <span><a href="#inicio">Volver</a></span>
       </article>
-
+      <hr>
       <article class="contenedorArt">
         <h2 id="siames">Siamés</h2>
         <div class="origen">
@@ -109,7 +109,7 @@
         </div>
         <span><a href="#inicio">Volver</a></span>
       </article>
-
+      <hr>
       <article class="contenedorArt">
         <h2 id="azulRuso">Azul Ruso</h2>
         <div class="origen">
@@ -145,7 +145,7 @@
         </div>
         <span><a href="#inicio">Volver</a></span>
       </article>
-
+      <hr>
       <article class="contenedorArt">
         <h2 id="sphynx">Sphynx</h2>
         <div class="origen">
@@ -174,7 +174,7 @@
         </div>
         <span><a href="#inicio">Volver</a></span>
       </article>
-
+      <hr>
       <article class="contenedorArt">
         <h2 id="maineCoon">Maine Coon</h2>
         <div class="origen">
@@ -207,27 +207,29 @@
     </section>
     <section id="seccionForm">
       <form>
-        <legend>¡Elige a tu raza favorita!</legend>
-        <div>
-          <input type="checkbox" name="comun europeo" class="inputSeleccionar" id="checkComunEuropeo">
-          <label for="checkComunEuropeo">Común Europeo</label>
+        <legend>¡Elige tu raza favorita!</legend>
+        <div class="contenedorInput">
+          <div>
+            <input type="checkbox" name="comun europeo" class="inputSeleccionar" id="checkComunEuropeo">
+            <label for="checkComunEuropeo">Común Europeo</label>
+          </div>
+          <div>
+            <input type="checkbox" name="siames" class="inputSeleccionar" id="checkSiames">
+            <label for="checkComunEuropeo">Siamés</label>
+          </div>
+          <div>
+            <input type="checkbox" name="azul ruso" class="inputSeleccionar" id="checkAzulRuso">
+            <label for="checkComunEuropeo">Azul Ruso</label>
+          </div>
+          <div>
+            <input type="checkbox" name="sphynx" class="inputSeleccionar" id="checkSphynx">
+            <label for="checkComunEuropeo">Sphynx</label>
+          </div>
+          <div>
+            <input type="checkbox" name="maine coon" class="inputSeleccionar" id="checkMaineCoon">
+            <label for="checkComunEuropeo">Maine Coon</label>
+          </div>  
         </div>
-        <div>
-          <input type="checkbox" name="siames" class="inputSeleccionar" id="checkSiames">
-          <label for="checkComunEuropeo">Siamés</label>
-        </div>
-        <div>
-          <input type="checkbox" name="azul ruso" class="inputSeleccionar" id="checkAzulRuso">
-          <label for="checkComunEuropeo">Azul Ruso</label>
-        </div>
-        <div>
-          <input type="checkbox" name="sphynx" class="inputSeleccionar" id="checkSphynx">
-          <label for="checkComunEuropeo">Sphynx</label>
-        </div>
-        <div>
-          <input type="checkbox" name="maine coon" class="inputSeleccionar" id="checkMaineCoon">
-          <label for="checkComunEuropeo">Maine Coon</label>
-        </div>  
         <div id="botonEnviar">
           <input type="submit" value="Enviar">
         </div>
@@ -235,22 +237,18 @@
     </section>
 </main>
 <footer>
-  <div>
-    <div class="contenedorInfo">
+  <div class="contenedorInfo">
       <span>Consigna para Desarrollo Web</span>
       <br>
       <span>BA Multiplica</span>
-    </div>
   </div>
-  <div>
-    <div class="contenedorInfo">
+  <div class="contenedorInfo">
       <h5>Fuentes:</h5>
       <ul>
         <li><a href="https://www.expertoanimal.com/" target="_blank">Experto Animal</a></li>
         <li><a href="https://www.zooplus.es/magazine" target="_blank">Zooplus magazine</a></li>
         <li><a href="https://www.hillspet.es/" target="_blank">Hill's Pet</a></li>
       </ul>
-    </div>
   </div>
 </footer>
 </body>
